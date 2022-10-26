@@ -1,0 +1,87 @@
+{
+  "name": "smarty-ui-vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "dev": "vite",
+    "lint": "eslint --fix --ext .ts,.vue src",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
+    "build": "vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "preinstall": "node ./scripts/preinstall.js",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+github.com:LWJcoder/Bem-ui-vite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@algolia/client-search": "^4.9.1",
+    "@iconify-json/ic": "1.1.4",
+    "@types/react": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "@unocss/preset-attributify": "^0.35.1",
+    "@unocss/preset-icons": "^0.30.10",
+    "@unocss/preset-uno": "^0.35.1",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vitejs/plugin-vue-jsx": "2.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "2.0.2",
+    "c8": "^7.11.3",
+    "happy-dom": "6.0.4",
+    "husky": "^8.0.1",
+    "jsdom": "^19.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "unocss": "0.45.6",
+    "vite": "3.0.7",
+    "vitepress": "^0.22.4",
+    "vitest": "0.21.1"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "babel-eslint": "^10.1.0",
+    "codecov": "^3.8.3",
+    "eslint": "^8.13.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.6.0",
+    "esno": "^0.16.3",
+    "fs-extra": "^10.1.0",
+    "prettier": "^2.6.2",
+    "terser": "^5.15.1",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.5",
+    "vite-plugin-dts": "^1.6.6",
+    "vue": "3.2.37"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(*ftp).{js,jsx,vue,ts,tsx}": [
+      "pnpm run lint",
+      "git add"
+    ]
+  },
+  "rules": {
+    "generator-star-spacing": "off",
+    "no-tabs": "off",
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "no-irregular-whitespace": "off",
+    "no-debugger": "off"
+  }
+}
